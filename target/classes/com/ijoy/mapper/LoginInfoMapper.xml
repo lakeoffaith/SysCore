@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.ijoy.mapper.LoginInfoMapper">
+	
+	
+	<select id="insert" parameterType="LoginInfo">
+		insert into loginInfo(code,loginName) VALUES (#{code},#{loginName});
+	</select>
+	
+	<select id="getLoginInfoByPhoneAndCode" resultType="LoginInfo">
+		select * from loginInfo where loginName=#{loginName} and code=#{code}
+	</select>
+	
+	<update id="update" parameterType="LoginInfo">
+		update loginInfo set code=#{code},loginName=#{loginName},lastLoginTime=#{lastLoginTime},userId=#{userId}
+		where id=#{id}
+	</update>
+	
+	
+	
+</mapper>

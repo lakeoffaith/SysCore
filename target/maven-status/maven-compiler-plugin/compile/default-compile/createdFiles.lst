@@ -1,0 +1,4 @@
+com\ijoy\mapper\CommentMapper.class
+com\ijoy\service\impl\CommentServiceImpl.class
+com\ijoy\service\ICommentService.class
+com\ijoy\modal\Comment.class
